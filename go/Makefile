@@ -40,13 +40,13 @@ deploy:docker-push  ##@docker 推送镜像.
 
 deploy-test:
 	@echo "sidsa-service 停止服务:"
-	ssh root@8.140.156.102 systemctl stop sidsa-service
-	scp -r config/*.yml root@8.140.156.102:/app/sidsa-service/configs/
-	scp -r sidsa-service root@8.140.156.102:/app/sidsa-service/
+	ssh root@x.x.x.x systemctl stop sidsa-service
+	scp -r config/*.yml root@x.x.x.x:/app/sidsa-service/configs/
+	scp -r sidsa-service root@x.x.x.x:/app/sidsa-service/
 	@echo "sidsa-service 启动服务:"
-	ssh root@8.140.156.102 systemctl start sidsa-service
+	ssh root@x.x.x.x systemctl start sidsa-service
 	@echo "sidsa-service 服务:"
-	ssh root@8.140.156.102 systemctl status sidsa-service
+	ssh root@x.x.x.x systemctl status sidsa-service
 
 HELP_FUN = \
 	%help; \
